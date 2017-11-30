@@ -1,0 +1,27 @@
+<div class="container from-box">
+    <form name="f" ng-submit="onSubmit(f.$valid)" novalidate>
+        <legend>{{action}}</legend>
+
+        <div class="form-group">
+            <label for="uname">用户名</label>
+            <input type="text" class="form-control" name="uname" required pattern="[a-zA-Z0-9]{6,15}" id="uname" ng-model="user.name">
+            <span id="helpBlock" class="help-block" ng-show="f.uname.$invaild"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="uname">邮箱</label>
+            <input type="email" class="form-control" name="uname" required pattern="[a-zA-Z0-9]{6,15}" id="email" ng-model="user.name">
+
+        </div>
+
+        <div class="form-group">
+            <label for="role" class="col-sm-2 control-label">用户角色</label>
+            <select class="form-control" id="role" ng-model="user.role">
+                <option value="admin">管理员</option>
+                <option value="user">普通用户</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
